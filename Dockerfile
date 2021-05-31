@@ -2,7 +2,7 @@ FROM node:14
 MAINTAINER Sonali Pitre
 WORKDIR /usr/src/app
 COPY package*.json app.js ./
-RUN npm install
+RUN npm install && npm install express --save
 EXPOSE 3000
 CMD ["node", "app.js"]
 
